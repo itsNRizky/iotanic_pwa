@@ -12,12 +12,11 @@ const AddDevice = () => {
   }
   return (
     <div>
-      <h1>Halaman Tambah Device Pake QR Scanner</h1>
+      <h1>Halaman Tambah Device Pake QR ScannerRRR</h1>
       <QrReader
         onScan={handleScan}
         onError={errorScan}
-        facingMode={'front'}
-        
+        facingMode='rear'
       />
         <p>{data}</p>
     </div>
