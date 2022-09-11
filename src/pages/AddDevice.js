@@ -16,7 +16,8 @@ const AddDevice = () => {
       <QrReader
         onScan={handleScan}
         onError={errorScan}
-        facingMode={'rear'}
+        facingMode={'front'}
+        
       />
         <p>{data}</p>
     </div>
