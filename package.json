@@ -10,7 +10,6 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-horizontal-scrolling-menu": "^3.2.0",
-    "react-qr-scanner": "^1.0.0-alpha.11",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-type-animation": "^1.1.3",

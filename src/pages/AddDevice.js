@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import QrReader from 'react-qr-scanner'
 
 const AddDevice = () => {
   const [data, setData] = useState('Nothing')
@@ -13,11 +12,6 @@ const AddDevice = () => {
   return (
     <div>
       <h1>Halaman Tambah Device Pake QR ScannerRRR</h1>
-      <QrReader
-        onScan={handleScan}
-        onError={errorScan}
-        facingMode='rear'
-      />
         <p>{data}</p>
     </div>
   )
