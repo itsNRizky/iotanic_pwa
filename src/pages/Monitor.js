@@ -51,21 +51,21 @@ const Monitor = () => {
       <div className='relative flex flex-col justify-center items-center w-64 m-auto mt-6'>
         <CircularProgressbar styles={buildStyles({
           pathColor: `rgba(0, 45, 59, 1)`
-        })} value={70} 
+        })} value={Math.abs(1-((225 - device.records[device.records.length - 1].n) / 225)) * 100} 
           
         />
         <div className='absolute flex flex-col justify-center items-center w-48'>
           <CircularProgressbar styles={buildStyles({
           pathColor: `rgba(5, 120, 77, 1)`
-        })} value={50} />
+        })} value={Math.abs(1-((150 - device.records[device.records.length - 1].p) / 150)) * 100} />
           <div className='absolute flex flex-col justify-center items-center w-32'>
             <CircularProgressbar styles={buildStyles({
           pathColor: `rgba(117, 154, 162, 1)`
-        })} value={25} />
+        })} value={Math.abs(1-((200 - device.records[device.records.length - 1].k) / 200)) * 100} />
             <div className='absolute w-20'> 
               <CircularProgressbar styles={buildStyles({
           pathColor: `rgba(139, 190, 171, 1)`
-        })} value={10} />
+        })} value={Math.abs(1-((7 - device.records[device.records.length - 1].ph) / 7)) * 100} />
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Monitor = () => {
             <p>Nitrogen</p>
           </div>
           <p>{device.records[device.records.length - 1].n}g</p>
-          <p>64%</p>
+          <p>{Math.round(Math.abs(1-((225 - device.records[device.records.length - 1].n) / 225)) * 100)}%</p>
         </div>
         <div className='flex items-center justify-between px-8 border-b drop-shadow-md rounded-[20px] my-3'>
           <div className='flex items-center w-1/3'>
@@ -85,7 +85,7 @@ const Monitor = () => {
             <p>Phosphor</p>
           </div>
           <p>{device.records[device.records.length - 1].p}g</p>
-          <p>64%</p>
+          <p>{Math.round(Math.abs(1-((150 - device.records[device.records.length - 1].p) / 150)) * 100)}%</p>
         </div>
         <div className='flex items-center justify-between px-8 border-b drop-shadow-md rounded-[20px] my-3'>
           <div className='flex items-center w-1/3'>
@@ -93,7 +93,7 @@ const Monitor = () => {
             <p>Kalium</p>
           </div>
           <p>{device.records[device.records.length - 1].k}g</p>
-          <p>30%</p>
+          <p>{Math.round(Math.abs(1-((200 - device.records[device.records.length - 1].k) / 200)) * 100)}%</p>
         </div>
         <div className='flex items-center justify-between px-8 border-b drop-shadow-md rounded-[20px] my-3'>
           <div className='flex items-center w-1/3'>
@@ -101,7 +101,7 @@ const Monitor = () => {
             <p>pH</p>
           </div>
           <p>{device.records[device.records.length - 1].ph}pH</p>
-          <p>62%</p>
+          <p>{Math.round(Math.abs(1-((7 - device.records[device.records.length - 1].ph) / 7)) * 100)}%</p>
         </div>
       </div>
       <div className='flex justify-center items-center px-8 mt-8'>
